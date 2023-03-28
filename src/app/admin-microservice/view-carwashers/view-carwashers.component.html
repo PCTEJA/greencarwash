@@ -1,0 +1,25 @@
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Index</th>
+          <th scope="col">Washer Name</th>
+          <th scope="col">Washer Email</th>
+          <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let washer of washers; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            Washer Name : {{washer.washerName}}
+          </td>
+          <td>
+            Washer Email : {{washer.washerEmail}}
+          </td>
+          <td>
+            <button mat-button color="warn" (click)="delete(washer.id)">DELETE</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+

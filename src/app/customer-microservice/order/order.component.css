@@ -1,0 +1,48 @@
+
+input.ng-invalid{
+  border: 0.2px solid red;
+}
+
+input.ng-valid{
+  border: 1px solid green;
+}
+h1{
+  text-align: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #e3e3e3;
+  width: 680px;
+  margin: 5% auto;
+  text-align: left;
+}
+
+
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+}
+div {
+  margin: 10px;
+}
+
+button{
+
+  padding:8px;
+  margin-bottom: 15px;
+  background-color: #3085d6;
+  color: white;
+}
+
+button:hover{
+  color: black;
+}
+
+button:disabled{
+  background-color: grey;
+  color: black;
+}

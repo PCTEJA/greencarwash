@@ -1,0 +1,30 @@
+{{message}}
+<form [formGroup]="AddPromosForm" >
+  <h1>Add a new Promo Code</h1>
+  <div class="row">
+
+    <label for="code"><span> Add the PromoCode</span> <input type="input" formControlName="code"
+      [(ngModel)]="addPromo.code">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="name"><span> Enter Cost </span>
+      <input type="text" formControlName="price" [(ngModel)]="addPromo.price">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="name"><span> Description </span>
+      <input type="text" formControlName="description"[(ngModel)]="addPromo.description">
+      </label>
+  </div>
+
+  <div class="active">
+    <p>Activate Now?</p>
+    <button  color="success" (click)="addPromo.active=true">Yes</button>
+    <button  color="danger" (click)="addPromo.active=true" >NO</button>
+  </div>
+
+  <button type="submit" (click)="addCar()" class="submit" [disabled]="AddPromosForm.invalid" >Update</button>
+</form>

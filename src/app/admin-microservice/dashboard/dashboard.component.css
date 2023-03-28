@@ -1,0 +1,27 @@
+.jumbotron{
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgb(90, 211, 219);
+  padding: 100px;
+  border-radius: 3%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:visited{
+  color: black;
+}
+
+li{
+  border:2px black solid;
+  background-color: rgb(247, 241, 241);
+  color: black;
+  list-style: none;
+  text-align: center;
+  margin: 2px;
+}

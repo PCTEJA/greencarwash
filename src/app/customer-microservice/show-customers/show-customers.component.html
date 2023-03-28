@@ -1,0 +1,31 @@
+
+      <mat-card class="card" *ngFor="let order of orders">
+        <mat-card-subtitle>{{order.time}}</mat-card-subtitle>
+        <mat-card-subtitle>{{order.customerEmail}}</mat-card-subtitle>
+        <mat-card-title>{{order.customerName}}</mat-card-title>
+        <mat-card-content>
+
+          <p>{{order.customerAddress}} : {{order.customerPlace}}</p>
+          <p>Total Price {{(order.washcost+order.addOnCost)}}</p>
+          <p>Coupon Applied - {{order.promoprice}}</p>
+          <p>Total Cost : {{(order.washcost+order.addOnCost)-order.promoprice}} </p>
+        </mat-card-content>
+        <div *ngIf="order.washerName">
+          <mat-divider inset ></mat-divider>
+          <br>
+        <p>Washer Name : {{(order.washerName)}}</p>
+        <mat-divider inset></mat-divider>
+        </div>
+        <div *ngIf="!order.washerName">
+          <mat-divider inset ></mat-divider>
+          <br>
+        <p>Pending...</p>
+        <mat-divider inset></mat-divider>
+        </div>
+
+        <mat-card-actions>
+          <button mat-button color="warn" (click)="delete(order.id)">DELETE</button>
+        </mat-card-actions>
+      </mat-card>
+
+

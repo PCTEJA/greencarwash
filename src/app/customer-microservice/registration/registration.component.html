@@ -1,0 +1,38 @@
+{{message}}
+<form [formGroup]="RegistrationForm" > 
+  <div class="row">
+    <h1>Register</h1>
+  </div>
+  <div class="row">
+
+    <label for="email"><span> Enter Email </span> <input type="email" formControlName="customerEmail"
+      [(ngModel)]="customerDetails.customerEmail">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="name"><span> Enter Name </span>
+      <input type="text"  [(ngModel)]="customerDetails.username" formControlName="username">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="password"><span> Enter Password </span>
+      <input type="password"  [(ngModel)]="customerDetails.password" formControlName="password">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="place"><span> Enter Place </span> <input type="text" formControlName="customerPlace"
+ [(ngModel)]="customerDetails.customerPlace">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="name"><span> Enter Address  </span> <input type="text" formControlName="customerAddress"
+       class="big-text" [(ngModel)]="customerDetails.customerAddress">
+      </label>
+  </div>
+
+  <button type="submit" (click)="registerNow()" [disabled]="RegistrationForm.invalid"><a routerLink="/customer">Register</a></button>
+</form>

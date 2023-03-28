@@ -1,0 +1,24 @@
+{{message}}
+<form [formGroup]="AddonForm" >
+  <h1>Add a new add-on service</h1>
+  <div class="row">
+
+    <label for="email"><span> Add On </span> <input type="email" formControlName="email"
+      [(ngModel)]="addonDetails.addon">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="name"><span> Enter Cost </span>
+      <input type="text" formControlName="name" [(ngModel)]="addonDetails.cost">
+      </label>
+  </div>
+
+  <div class="active">
+    <p>Activate Now?</p>
+    <button  color="success" (click)="addonDetails.active=true">Yes</button>
+    <button  color="danger" (click)="addonDetails.active=true" >NO</button>
+  </div>
+
+  <button type="submit" (click)="addAddon()">Register</button>
+</form>

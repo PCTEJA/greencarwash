@@ -1,0 +1,53 @@
+<!-- <mat-card class="card" *ngFor="let promo of promos">
+  <div class="pill" >
+    <mat-card-subtitle class="danger" *ngIf="!promo.active" >NOT ACTIVE</mat-card-subtitle>
+    <mat-card-subtitle class="success" *ngIf="promo.active">ACTIVE</mat-card-subtitle>
+  </div>
+
+  <mat-card-title>{{promo.code}}</mat-card-title>
+  <mat-card-content>
+    <p>Discount - {{promo.price}}</p>
+    <p>{{promo.description}}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <button mat-button color="warn" (click)="deletePromos(promo.id)">DELETE</button>
+    <button mat-button color="accent" (click)="editPromos(promo.id)">EDIT</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Index</th>
+    <th scope="col">ACTIVE?</th>
+    <th scope="col">Code</th>
+    <th scope="col">Discount</th>
+    <th scope="col">Description</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let promo of promos; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td *ngIf="!promo.active">NOT ACTIVE</td>
+    <td *ngIf="promo.active">ACTIVE</td>
+    <td>
+     Code:  {{promo.code}}
+    </td>
+    <td>
+      Discount - {{promo.price}}
+    </td>
+    <td>
+      Details : {{promo.description}}
+    </td>
+    <td>
+      <button mat-button color="warn" (click)="deletePromos(promo.id)">DELETE</button>
+    </td>
+    <td>
+      <button mat-button color="accent" (click)="editPromos(promo.id)">EDIT</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+.card{
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 2px solid rgba(0, 0, 0, 0.288);
+}
+
+.confirm{
+  background-color: hsl(120, 59%, 48%);
+}
+
+.reject{
+  background-color: red;
+}

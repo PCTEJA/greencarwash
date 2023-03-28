@@ -1,0 +1,26 @@
+<div *ngFor="let order of orders let i = index">
+  <mat-card class="card" >
+    <mat-card-subtitle>{{order.time}}</mat-card-subtitle>
+    <mat-card-subtitle>{{order.customerEmail}}</mat-card-subtitle>
+    <mat-card-title>{{order.customerName}}</mat-card-title>
+    <mat-card-content>
+
+      <p>{{order.customerAddress}} : {{order.customerPlace}}</p>
+      <p>Total Cost : {{(order.washcost+order.addOnCost)-order.promoprice}} </p>
+    </mat-card-content>
+    <div *ngIf="order.washerName">
+      <mat-divider inset ></mat-divider>
+      <br>
+    <p >Washer Name : {{(order.washerName)}}</p>
+    <p >Washer Email : {{order.washerEmail}}</p>
+    <mat-divider inset></mat-divider>
+    </div>
+    <mat-card-actions>
+      <button mat-button color="warn" (click)="hide(i)">REJECT</button>
+      <button mat-button color="success" (click)="select(order)">ACCEPT</button>
+    </mat-card-actions>
+    <!-- <button (click)="sweetDialog()"></button> -->
+  </mat-card>
+</div>
+
+

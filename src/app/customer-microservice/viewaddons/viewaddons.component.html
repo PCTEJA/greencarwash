@@ -1,0 +1,15 @@
+
+      <mat-card class="card" *ngFor="let addon of addons">
+        <div class="pill" >
+          <mat-card-subtitle class="danger" *ngIf="!addon.active" >NOT ACTIVE</mat-card-subtitle>
+          <mat-card-subtitle class="success" *ngIf="addon.active">ACTIVE</mat-card-subtitle>
+        </div>
+
+        <mat-card-title>{{addon.addon}}</mat-card-title>
+        <mat-card-content>
+          <p>Addon Prices - {{addon.cost}}</p>
+        </mat-card-content>
+        <mat-divider inset></mat-divider>
+      </mat-card>
+
+

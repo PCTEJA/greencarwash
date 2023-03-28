@@ -1,0 +1,49 @@
+
+.navbar{
+    justify-content: space-between;
+    background-color: rgba(252, 252, 252, 0.753);
+    color: rgb(0, 0, 0);
+}
+
+span{
+    padding: 1rem;
+}
+.logosetting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+  margin-left: 3rem;
+    width: 40px;
+}
+
+ng-sidebar-container{
+    height: 100vh;
+}
+::ng-deep .ng-sidebar{
+    background-color: #f4f4f4;
+    width: 300px;
+    padding: 2em 3em;
+    box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.2);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+side-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin: 200px;
+}
+
+side-nav p{
+    margin: 10px;
+    padding:10px;
+}
+
+

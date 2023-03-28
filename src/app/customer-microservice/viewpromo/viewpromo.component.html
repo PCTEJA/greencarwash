@@ -1,0 +1,13 @@
+<mat-card class="card" *ngFor="let promo of promos">
+  <div class="pill" >
+    <mat-card-subtitle class="danger" *ngIf="!promo.active" >NOT ACTIVE</mat-card-subtitle>
+    <mat-card-subtitle class="success" *ngIf="promo.active">ACTIVE</mat-card-subtitle>
+  </div>
+
+  <mat-card-title>{{promo.code}}</mat-card-title>
+  <mat-card-content>
+    <p>Discount - {{promo.price}}</p>
+    <p>{{promo.description}}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+</mat-card>

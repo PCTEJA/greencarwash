@@ -1,0 +1,17 @@
+{{message}}
+<form [formGroup]="RegistrationForm" >
+  <div class="row">
+    <h1>Register</h1>
+    <label for="email"><span> Enter Email </span> <input type="email" formControlName="email"
+      [(ngModel)]="carwasherDetails.washerEmail">
+      </label>
+  </div>
+
+  <div class="row">
+    <label for="name"><span> Enter Name </span>
+      <input type="text" formControlName="name" [(ngModel)]="carwasherDetails.washerName">
+      </label>
+  </div>
+
+  <button type="submit" (click)="registerNow()" [disabled]="RegistrationForm.invalid"> <a routerLink="/carwasher">Register</a> </button>
+carwasher

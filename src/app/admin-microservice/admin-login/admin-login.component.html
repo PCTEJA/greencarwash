@@ -1,0 +1,20 @@
+<form [formGroup]="LoginForm" >
+  <h1>Login</h1>
+  <div class="row">
+
+    <label for="name"><span> User Name </span> <input type="username" formControlName="name"
+      [(ngModel)]="username">
+      </label>
+  </div>
+  <div class="row">
+    <label for="passsword"><span> Enter password </span><input type="password" formControlName="password"
+      [(ngModel)]="password">
+      </label>
+  </div>
+
+  <button type="submit" [disabled]="LoginForm.invalid" (click)="login()">Login</button><p>
+  <p>New User? <a routerLink="/carwasher/registration">Sign Up Now</a> </p>
+</form>
+
+
+

@@ -1,0 +1,50 @@
+<form [formGroup]="orderForm" >
+
+  <h1>New Order</h1>
+  
+  <div class="row">
+    
+    <label for="name"><span> Enter Name of Customer </span>
+      <input type="text" formControlName="name"  [(ngModel)]="name">
+      </label>
+  </div>
+  <div class="row">
+    <label for="userid"><span> Enter user ID </span>
+      <input type="text" formControlName="userid" [(ngModel)]="order.userId">
+    </label>
+  </div>
+  <div class="row">
+    <label for="phoneNo"><span> Enter Phone Number </span>
+      <input type="text" formControlName="phoneNo" [(ngModel)]="order.phoneNo">
+      </label>
+  </div>
+  <div class="row">
+    <label for="time"><span> Enter Date </span>
+      <input type="date" formControlName="date" [(ngModel)]="order.date">
+  </label>
+  </div>
+  <div class="row">
+    <label for="washerName"><span> Enter Washer Name</span>
+      <input type="text" formControlName="washerName" [(ngModel)]="order.washerName">
+  </label>
+  </div>
+    <div class="row">
+      <label for="washpackId"><span> Enter Wash Pack ID</span>
+        <input type="text" formControlName="washpackId" [(ngModel)]="order.washpackId" (change)="getPrice();">
+      </label>
+    </div>
+    <div class="row">
+      <label for="carName"><span> Enter Car Name</span>
+        <input type="text" formControlName="carName" [(ngModel)]="order.carName">
+      </label>
+    </div>
+    <div class="row">
+      <label for="carModel"><span> Enter Car Model</span>
+        <input type="text" formControlName="carModel" [(ngModel)]="order.carModel">
+      </label>
+    </div>
+
+  <!-- <p>Cost {{price}}</p> -->
+  <button class="mat-button mat-success" (click)="confirm()" [disabled]="orderForm.invalid">Place Order</button>
+  <!-- <p>{{message}}</p> -->
+</form>

@@ -1,0 +1,49 @@
+<div class="container">
+  <mat-toolbar class="navbar">
+    <div class="logo-setting">
+        <button (click)="_toggleSidebar()">
+         <span><mat-icon class="menu">menu</mat-icon></span>
+        </button>
+        <a routerLink=""><img src="../../../assets/logo.png" alt="logo" class="logo">
+             <span>GreenCarWash</span>
+        </a>
+    </div>
+    <div>
+        <span>
+            <button mat-mini-fab color="primary">
+              <a routerLink="/admin/">
+                <mat-icon>home</mat-icon>
+              </a>
+            </button>
+        </span>
+        <span>
+            <button mat-mini-fab color="primary">
+              <mat-icon>login</mat-icon>
+            </button>
+        </span>
+    </div>
+    </mat-toolbar>
+    <ng-sidebar-container>
+      <ng-sidebar [(opened)]="_opened">
+        <button (click)="_toggleSidebar()"><mat-icon>close</mat-icon></button>
+        <div class="side-nav">
+           <a routerLink="/admin"><p>Dashboard</p></a>
+           <a routerLink="/admin/vieworders"><p>View Orders</p></a>
+           <a routerLink="/admin/viewpromos"><p>View Promos</p></a>
+           <a routerLink="/admin/viewcardetails"><p>View Car Details</p></a>
+           <a routerLink="/admin/viewaddons"><p>View Addons</p></a>
+           <a routerLink="/admin/viewcustomers"><p>View Customers</p></a>
+           <a routerLink="/admin/viewcarwashers"><p>View Car Washers</p></a>
+          <a routerLink="/admin/add_promos"><p>Add New Promos </p></a>
+          <a routerLink="/admin/add_cardetails"><p>Add New Car Details </p></a>
+          <a routerLink="/admin/add_addons"><p>Add New AddOns </p></a>
+          <a routerLink="/admin/contact"><p>Contact </p></a>
+        </div>
+
+      </ng-sidebar>
+      <div ng-sidebar-content>
+      <router-outlet></router-outlet>
+      </div>
+    </ng-sidebar-container>
+</div>
+

@@ -1,0 +1,46 @@
+ <div class="container">
+  <mat-toolbar class="navbar">
+    <div class="logo-setting">
+        <button (click)="_toggleSidebar()">
+         <span><mat-icon class="menu">menu</mat-icon></span>
+        </button>
+        <a routerLink=""><img src="../../../assets/logo.png" alt="logo" class="logo">
+          <span>GreenCarWash</span>
+     </a>
+    </div>
+    <div>
+        <span>
+            <button mat-mini-fab color="primary">
+              <a routerLink="/customer" (click)="active(true)">
+                <mat-icon>home</mat-icon>
+              </a>
+            </button>
+        </span>
+        <span>
+            <button mat-mini-fab color="primary">
+              <mat-icon>login</mat-icon>
+            </button>
+        </span>
+    </div>
+    </mat-toolbar>
+    <ng-sidebar-container>
+      <ng-sidebar [(opened)]="_opened">
+        <button (click)="_toggleSidebar()"><mat-icon>close</mat-icon></button>
+        <div class="side-nav">
+           <a routerLink="/customer" (click)="active(true)"><p>Dashboard</p></a>
+           <a routerLink="/customer/view" ><p>View Orders</p></a>
+           <a routerLink="/customer/viewpromos" ><p>View Promos</p></a>
+           <a routerLink="/customer/viewcardetails" ><p>View Car Details</p></a>
+           <a routerLink="/customer/viewaddons" ><p>View Addons</p></a>
+           <a routerLink="/customer/order"><p>Place New Order</p></a>
+        </div>
+
+      </ng-sidebar>
+      <div ng-sidebar-content>
+
+
+      <router-outlet></router-outlet>
+      </div>
+    </ng-sidebar-container>
+</div>
+
